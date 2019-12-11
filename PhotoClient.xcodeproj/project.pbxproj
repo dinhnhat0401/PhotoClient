@@ -37,6 +37,12 @@
 		FE9BFA9A23A0C04100FBF84A /* PhotoClientModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9BFA6D23A0AD7000FBF84A /* PhotoClientModel.framework */; };
 		FE9BFA9B23A0C04100FBF84A /* PhotoClientView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9BFA2823A0AD4C00FBF84A /* PhotoClientView.framework */; };
 		FE9BFA9C23A0C04100FBF84A /* PhotoClientViewModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9BFA4B23A0AD5F00FBF84A /* PhotoClientViewModel.framework */; };
+		FE9BFAD223A0D07300FBF84A /* Swinject.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = FE9BFACC23A0D07200FBF84A /* Swinject.framework.dSYM */; };
+		FE9BFAD323A0D07300FBF84A /* Himotoki.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = FE9BFACD23A0D07200FBF84A /* Himotoki.framework.dSYM */; };
+		FE9BFAD423A0D07300FBF84A /* Alamofire.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = FE9BFACE23A0D07200FBF84A /* Alamofire.framework.dSYM */; };
+		FE9BFAD523A0D07300FBF84A /* RxSwift.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = FE9BFACF23A0D07200FBF84A /* RxSwift.framework.dSYM */; };
+		FE9BFAD623A0D07300FBF84A /* RxCocoa.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = FE9BFAD023A0D07200FBF84A /* RxCocoa.framework.dSYM */; };
+		FE9BFAD723A0D07300FBF84A /* SnapKit.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = FE9BFAD123A0D07200FBF84A /* SnapKit.framework.dSYM */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +132,22 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FE9BFACA23A0CFE500FBF84A /* Copy dSYMs */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = dSYMs;
+			dstSubfolderSpec = 16;
+			files = (
+				FE9BFAD223A0D07300FBF84A /* Swinject.framework.dSYM in Copy dSYMs */,
+				FE9BFAD323A0D07300FBF84A /* Himotoki.framework.dSYM in Copy dSYMs */,
+				FE9BFAD423A0D07300FBF84A /* Alamofire.framework.dSYM in Copy dSYMs */,
+				FE9BFAD523A0D07300FBF84A /* RxSwift.framework.dSYM in Copy dSYMs */,
+				FE9BFAD623A0D07300FBF84A /* RxCocoa.framework.dSYM in Copy dSYMs */,
+				FE9BFAD723A0D07300FBF84A /* SnapKit.framework.dSYM in Copy dSYMs */,
+			);
+			name = "Copy dSYMs";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -162,6 +184,12 @@
 		FE9BFA7C23A0AD7100FBF84A /* PhotoClientModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoClientModelTests.swift; sourceTree = "<group>"; };
 		FE9BFA7E23A0AD7100FBF84A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE9BFA9923A0BF4000FBF84A /* PhotoClient.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = PhotoClient.xctestplan; sourceTree = "<group>"; };
+		FE9BFACC23A0D07200FBF84A /* Swinject.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Swinject.framework.dSYM; sourceTree = "<group>"; };
+		FE9BFACD23A0D07200FBF84A /* Himotoki.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Himotoki.framework.dSYM; sourceTree = "<group>"; };
+		FE9BFACE23A0D07200FBF84A /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Alamofire.framework.dSYM; sourceTree = "<group>"; };
+		FE9BFACF23A0D07200FBF84A /* RxSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxSwift.framework.dSYM; sourceTree = "<group>"; };
+		FE9BFAD023A0D07200FBF84A /* RxCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxCocoa.framework.dSYM; sourceTree = "<group>"; };
+		FE9BFAD123A0D07200FBF84A /* SnapKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = SnapKit.framework.dSYM; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +280,7 @@
 				FE9BFA6E23A0AD7000FBF84A /* PhotoClientModel */,
 				FE9BF9EF23A0AB2300FBF84A /* PhotoClient */,
 				FE9BFA8A23A0AE6500FBF84A /* Tests */,
+				FE9BFACB23A0D01000FBF84A /* dSYMs */,
 				FE9BF9EE23A0AB2300FBF84A /* Products */,
 				FE9BFA8D23A0B02A00FBF84A /* Frameworks */,
 			);
@@ -379,6 +408,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FE9BFACB23A0D01000FBF84A /* dSYMs */ = {
+			isa = PBXGroup;
+			children = (
+				FE9BFACE23A0D07200FBF84A /* Alamofire.framework.dSYM */,
+				FE9BFACD23A0D07200FBF84A /* Himotoki.framework.dSYM */,
+				FE9BFAD023A0D07200FBF84A /* RxCocoa.framework.dSYM */,
+				FE9BFACF23A0D07200FBF84A /* RxSwift.framework.dSYM */,
+				FE9BFAD123A0D07200FBF84A /* SnapKit.framework.dSYM */,
+				FE9BFACC23A0D07200FBF84A /* Swinject.framework.dSYM */,
+			);
+			path = dSYMs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -417,6 +459,8 @@
 				FE9BF9EA23A0AB2300FBF84A /* Frameworks */,
 				FE9BF9EB23A0AB2300FBF84A /* Resources */,
 				FE9BFA4223A0AD4C00FBF84A /* Embed Frameworks */,
+				FE9BFA9D23A0C9B000FBF84A /* Carthage */,
+				FE9BFACA23A0CFE500FBF84A /* Copy dSYMs */,
 			);
 			buildRules = (
 			);
@@ -711,6 +755,33 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FE9BFA9D23A0C9B000FBF84A /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Himotoki.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Swinject.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FE9BF9E923A0AB2300FBF84A /* Sources */ = {
