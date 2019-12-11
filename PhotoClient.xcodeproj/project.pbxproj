@@ -25,6 +25,9 @@
 		84C6C63323A11B9E008B6B75 /* Swinject.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = 84C6C62323A11B83008B6B75 /* Swinject.framework.dSYM */; };
 		84C6C63523A11DFA008B6B75 /* PixaBay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6C63423A11DFA008B6B75 /* PixaBay.swift */; };
 		84C6C63723A11FDF008B6B75 /* PixaBay+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6C63623A11FDF008B6B75 /* PixaBay+Config.swift */; };
+		84C6C63923A1210B008B6B75 /* ImageSearching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6C63823A1210B008B6B75 /* ImageSearching.swift */; };
+		84C6C63B23A12154008B6B75 /* ImageSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6C63A23A12154008B6B75 /* ImageSearch.swift */; };
+		84C6C63E23A128A6008B6B75 /* ImageSearchSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6C63C23A12882008B6B75 /* ImageSearchSpec.swift */; };
 		FE9BF9F123A0AB2300FBF84A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9BF9F023A0AB2300FBF84A /* AppDelegate.swift */; };
 		FE9BF9F323A0AB2300FBF84A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9BF9F223A0AB2300FBF84A /* SceneDelegate.swift */; };
 		FE9BF9F523A0AB2300FBF84A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9BF9F423A0AB2300FBF84A /* ViewController.swift */; };
@@ -285,6 +288,9 @@
 		84C6C62323A11B83008B6B75 /* Swinject.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Swinject.framework.dSYM; path = Carthage/Build/iOS/Swinject.framework.dSYM; sourceTree = SOURCE_ROOT; };
 		84C6C63423A11DFA008B6B75 /* PixaBay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixaBay.swift; sourceTree = "<group>"; };
 		84C6C63623A11FDF008B6B75 /* PixaBay+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PixaBay+Config.swift"; sourceTree = "<group>"; };
+		84C6C63823A1210B008B6B75 /* ImageSearching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearching.swift; sourceTree = "<group>"; };
+		84C6C63A23A12154008B6B75 /* ImageSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearch.swift; sourceTree = "<group>"; };
+		84C6C63C23A12882008B6B75 /* ImageSearchSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchSpec.swift; sourceTree = "<group>"; };
 		FE9BF9ED23A0AB2300FBF84A /* PhotoClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9BF9F023A0AB2300FBF84A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE9BF9F223A0AB2300FBF84A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -555,8 +561,10 @@
 				FE9BFB2723A0E50800FBF84A /* Networking.swift */,
 				FE9BFB2923A0E58800FBF84A /* NetworkError.swift */,
 				FE9BFB2B23A0E71D00FBF84A /* Network.swift */,
+				84C6C63823A1210B008B6B75 /* ImageSearching.swift */,
 				84C6C63423A11DFA008B6B75 /* PixaBay.swift */,
 				84C6C63623A11FDF008B6B75 /* PixaBay+Config.swift */,
+				84C6C63A23A12154008B6B75 /* ImageSearch.swift */,
 			);
 			path = PhotoClientModel;
 			sourceTree = "<group>";
@@ -569,6 +577,7 @@
 				FE9BFAED23A0D7D900FBF84A /* Dummy.swift */,
 				FE9BFAEF23A0D8B200FBF84A /* ImageEntitySpec.swift */,
 				FE9BFB2D23A0EBD600FBF84A /* NetworkSpec.swift */,
+				84C6C63C23A12882008B6B75 /* ImageSearchSpec.swift */,
 			);
 			path = PhotoClientModelTests;
 			sourceTree = "<group>";
@@ -1044,6 +1053,8 @@
 				FE9BFB2A23A0E58800FBF84A /* NetworkError.swift in Sources */,
 				FE9BFAD923A0D44A00FBF84A /* ImageEntity.swift in Sources */,
 				84C6C63723A11FDF008B6B75 /* PixaBay+Config.swift in Sources */,
+				84C6C63923A1210B008B6B75 /* ImageSearching.swift in Sources */,
+				84C6C63B23A12154008B6B75 /* ImageSearch.swift in Sources */,
 				FE9BFAEC23A0D6BE00FBF84A /* ResponseEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1056,6 +1067,7 @@
 				FE9BFB2F23A0EBF400FBF84A /* NetworkSpec.swift in Sources */,
 				FE9BFB0B23A0E07100FBF84A /* ImageEntitySpec.swift in Sources */,
 				FE9BFA7D23A0AD7100FBF84A /* PhotoClientModelTests.swift in Sources */,
+				84C6C63E23A128A6008B6B75 /* ImageSearchSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
