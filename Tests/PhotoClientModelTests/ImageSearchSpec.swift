@@ -29,7 +29,6 @@ class ImageSearchSpec: QuickSpec {
             return Observable.create { (observer) -> Disposable in
                 observer.onNext(json)
                 observer.onCompleted()
-
                 return Disposables.create()
             }
         }

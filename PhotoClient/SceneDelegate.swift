@@ -7,17 +7,46 @@
 //
 
 import UIKit
+import PhotoClientModel
+import PhotoClientViewModel
+import PhotoClientView
+import Swinject
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    let container = Container() { container in
+        // Models
+        container.register(Networking.self) { _ in Network() }
+        container.register(ImageSearching.self) { r in
+            ImageSearch(network: r.resolve(Networking.self)!)
+        }
 
+        // View models
+        container.register(ImageSearchTableViewModeling.self) { r
+            in ImageSearchTableViewModel(imageSearch: r.resolve(ImageSearching.self)!)
+        }
+
+        // Views
+        container.register(ImageSearchTableViewController.self) { (r) in
+            let controller = ImageSearchTableViewController()
+            controller.viewModel = r.resolve(ImageSearchTableViewModeling.self)!
+            return controller
+        }
+    }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else {
+            return
+        }
+
+        let window = UIWindow(windowScene: windowScene)
+        window.rootViewController = UINavigationController(rootViewController: ImageSearchTableViewController())
+        self.window = window
+        window.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

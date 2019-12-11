@@ -12,6 +12,9 @@ import Alamofire
 public final class Network: Networking {
     private let queue = DispatchQueue(label: "photoclient.Network.Queue")
 
+    public init() {
+    }
+
     public func requestJSON(url: String, parameters: [String : Any]?) -> Observable<Any> {
         return Observable.create { (observer) -> Disposable in
             AF.request(url,
