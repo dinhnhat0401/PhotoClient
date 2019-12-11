@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84C6C62423A11B83008B6B75 /* RxRelay.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 84C6C61C23A11B82008B6B75 /* RxRelay.framework.dSYM */; };
+		84C6C62523A11B83008B6B75 /* RxSwift.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 84C6C61D23A11B83008B6B75 /* RxSwift.framework.dSYM */; };
+		84C6C62623A11B83008B6B75 /* RxCocoa.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 84C6C61E23A11B83008B6B75 /* RxCocoa.framework.dSYM */; };
+		84C6C62723A11B83008B6B75 /* RxBlocking.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 84C6C61F23A11B83008B6B75 /* RxBlocking.framework.dSYM */; };
+		84C6C62823A11B83008B6B75 /* SnapKit.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 84C6C62023A11B83008B6B75 /* SnapKit.framework.dSYM */; };
+		84C6C62923A11B83008B6B75 /* Quick.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 84C6C62123A11B83008B6B75 /* Quick.framework.dSYM */; };
+		84C6C62A23A11B83008B6B75 /* RxTest.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 84C6C62223A11B83008B6B75 /* RxTest.framework.dSYM */; };
+		84C6C62B23A11B83008B6B75 /* Swinject.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 84C6C62323A11B83008B6B75 /* Swinject.framework.dSYM */; };
+		84C6C62C23A11B9E008B6B75 /* Quick.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = 84C6C62123A11B83008B6B75 /* Quick.framework.dSYM */; };
+		84C6C62D23A11B9E008B6B75 /* RxBlocking.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = 84C6C61F23A11B83008B6B75 /* RxBlocking.framework.dSYM */; };
+		84C6C62E23A11B9E008B6B75 /* RxCocoa.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = 84C6C61E23A11B83008B6B75 /* RxCocoa.framework.dSYM */; };
+		84C6C62F23A11B9E008B6B75 /* RxRelay.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = 84C6C61C23A11B82008B6B75 /* RxRelay.framework.dSYM */; };
+		84C6C63023A11B9E008B6B75 /* RxSwift.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = 84C6C61D23A11B83008B6B75 /* RxSwift.framework.dSYM */; };
+		84C6C63123A11B9E008B6B75 /* RxTest.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = 84C6C62223A11B83008B6B75 /* RxTest.framework.dSYM */; };
+		84C6C63223A11B9E008B6B75 /* SnapKit.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = 84C6C62023A11B83008B6B75 /* SnapKit.framework.dSYM */; };
+		84C6C63323A11B9E008B6B75 /* Swinject.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = 84C6C62323A11B83008B6B75 /* Swinject.framework.dSYM */; };
+		84C6C63523A11DFA008B6B75 /* PixaBay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6C63423A11DFA008B6B75 /* PixaBay.swift */; };
+		84C6C63723A11FDF008B6B75 /* PixaBay+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6C63623A11FDF008B6B75 /* PixaBay+Config.swift */; };
 		FE9BF9F123A0AB2300FBF84A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9BF9F023A0AB2300FBF84A /* AppDelegate.swift */; };
 		FE9BF9F323A0AB2300FBF84A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9BF9F223A0AB2300FBF84A /* SceneDelegate.swift */; };
 		FE9BF9F523A0AB2300FBF84A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9BF9F423A0AB2300FBF84A /* ViewController.swift */; };
@@ -37,12 +55,6 @@
 		FE9BFA9A23A0C04100FBF84A /* PhotoClientModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9BFA6D23A0AD7000FBF84A /* PhotoClientModel.framework */; };
 		FE9BFA9B23A0C04100FBF84A /* PhotoClientView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9BFA2823A0AD4C00FBF84A /* PhotoClientView.framework */; };
 		FE9BFA9C23A0C04100FBF84A /* PhotoClientViewModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9BFA4B23A0AD5F00FBF84A /* PhotoClientViewModel.framework */; };
-		FE9BFAD223A0D07300FBF84A /* Swinject.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = FE9BFACC23A0D07200FBF84A /* Swinject.framework.dSYM */; };
-		FE9BFAD323A0D07300FBF84A /* Himotoki.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = FE9BFACD23A0D07200FBF84A /* Himotoki.framework.dSYM */; };
-		FE9BFAD423A0D07300FBF84A /* Alamofire.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = FE9BFACE23A0D07200FBF84A /* Alamofire.framework.dSYM */; };
-		FE9BFAD523A0D07300FBF84A /* RxSwift.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = FE9BFACF23A0D07200FBF84A /* RxSwift.framework.dSYM */; };
-		FE9BFAD623A0D07300FBF84A /* RxCocoa.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = FE9BFAD023A0D07200FBF84A /* RxCocoa.framework.dSYM */; };
-		FE9BFAD723A0D07300FBF84A /* SnapKit.framework.dSYM in Copy dSYMs */ = {isa = PBXBuildFile; fileRef = FE9BFAD123A0D07200FBF84A /* SnapKit.framework.dSYM */; };
 		FE9BFAD923A0D44A00FBF84A /* ImageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9BFAD823A0D44A00FBF84A /* ImageEntity.swift */; };
 		FE9BFAE023A0D5AE00FBF84A /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9BFADC23A0D59A00FBF84A /* RxCocoa.framework */; };
 		FE9BFAE123A0D5AE00FBF84A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9BFADD23A0D59A00FBF84A /* RxSwift.framework */; };
@@ -181,16 +193,18 @@
 		};
 		FE9BFACA23A0CFE500FBF84A /* Copy dSYMs */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = dSYMs;
 			dstSubfolderSpec = 16;
 			files = (
-				FE9BFAD223A0D07300FBF84A /* Swinject.framework.dSYM in Copy dSYMs */,
-				FE9BFAD323A0D07300FBF84A /* Himotoki.framework.dSYM in Copy dSYMs */,
-				FE9BFAD423A0D07300FBF84A /* Alamofire.framework.dSYM in Copy dSYMs */,
-				FE9BFAD523A0D07300FBF84A /* RxSwift.framework.dSYM in Copy dSYMs */,
-				FE9BFAD623A0D07300FBF84A /* RxCocoa.framework.dSYM in Copy dSYMs */,
-				FE9BFAD723A0D07300FBF84A /* SnapKit.framework.dSYM in Copy dSYMs */,
+				84C6C62C23A11B9E008B6B75 /* Quick.framework.dSYM in Copy dSYMs */,
+				84C6C62D23A11B9E008B6B75 /* RxBlocking.framework.dSYM in Copy dSYMs */,
+				84C6C62E23A11B9E008B6B75 /* RxCocoa.framework.dSYM in Copy dSYMs */,
+				84C6C62F23A11B9E008B6B75 /* RxRelay.framework.dSYM in Copy dSYMs */,
+				84C6C63023A11B9E008B6B75 /* RxSwift.framework.dSYM in Copy dSYMs */,
+				84C6C63123A11B9E008B6B75 /* RxTest.framework.dSYM in Copy dSYMs */,
+				84C6C63223A11B9E008B6B75 /* SnapKit.framework.dSYM in Copy dSYMs */,
+				84C6C63323A11B9E008B6B75 /* Swinject.framework.dSYM in Copy dSYMs */,
 			);
 			name = "Copy dSYMs";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +275,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		84C6C61C23A11B82008B6B75 /* RxRelay.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxRelay.framework.dSYM; path = Carthage/Build/iOS/RxRelay.framework.dSYM; sourceTree = SOURCE_ROOT; };
+		84C6C61D23A11B83008B6B75 /* RxSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxSwift.framework.dSYM; path = Carthage/Build/iOS/RxSwift.framework.dSYM; sourceTree = SOURCE_ROOT; };
+		84C6C61E23A11B83008B6B75 /* RxCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxCocoa.framework.dSYM; path = Carthage/Build/iOS/RxCocoa.framework.dSYM; sourceTree = SOURCE_ROOT; };
+		84C6C61F23A11B83008B6B75 /* RxBlocking.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxBlocking.framework.dSYM; path = Carthage/Build/iOS/RxBlocking.framework.dSYM; sourceTree = SOURCE_ROOT; };
+		84C6C62023A11B83008B6B75 /* SnapKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SnapKit.framework.dSYM; path = Carthage/Build/iOS/SnapKit.framework.dSYM; sourceTree = SOURCE_ROOT; };
+		84C6C62123A11B83008B6B75 /* Quick.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Quick.framework.dSYM; path = Carthage/Build/iOS/Quick.framework.dSYM; sourceTree = SOURCE_ROOT; };
+		84C6C62223A11B83008B6B75 /* RxTest.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxTest.framework.dSYM; path = Carthage/Build/iOS/RxTest.framework.dSYM; sourceTree = SOURCE_ROOT; };
+		84C6C62323A11B83008B6B75 /* Swinject.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Swinject.framework.dSYM; path = Carthage/Build/iOS/Swinject.framework.dSYM; sourceTree = SOURCE_ROOT; };
+		84C6C63423A11DFA008B6B75 /* PixaBay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixaBay.swift; sourceTree = "<group>"; };
+		84C6C63623A11FDF008B6B75 /* PixaBay+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PixaBay+Config.swift"; sourceTree = "<group>"; };
 		FE9BF9ED23A0AB2300FBF84A /* PhotoClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9BF9F023A0AB2300FBF84A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE9BF9F223A0AB2300FBF84A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -294,12 +318,6 @@
 		FE9BFA7C23A0AD7100FBF84A /* PhotoClientModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoClientModelTests.swift; sourceTree = "<group>"; };
 		FE9BFA7E23A0AD7100FBF84A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE9BFA9923A0BF4000FBF84A /* PhotoClient.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = PhotoClient.xctestplan; sourceTree = "<group>"; };
-		FE9BFACC23A0D07200FBF84A /* Swinject.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Swinject.framework.dSYM; sourceTree = "<group>"; };
-		FE9BFACD23A0D07200FBF84A /* Himotoki.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Himotoki.framework.dSYM; sourceTree = "<group>"; };
-		FE9BFACE23A0D07200FBF84A /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Alamofire.framework.dSYM; sourceTree = "<group>"; };
-		FE9BFACF23A0D07200FBF84A /* RxSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxSwift.framework.dSYM; sourceTree = "<group>"; };
-		FE9BFAD023A0D07200FBF84A /* RxCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxCocoa.framework.dSYM; sourceTree = "<group>"; };
-		FE9BFAD123A0D07200FBF84A /* SnapKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = SnapKit.framework.dSYM; sourceTree = "<group>"; };
 		FE9BFAD823A0D44A00FBF84A /* ImageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEntity.swift; sourceTree = "<group>"; };
 		FE9BFADA23A0D58100FBF84A /* Himotoki.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Himotoki.framework; path = Carthage/Build/iOS/Himotoki.framework; sourceTree = "<group>"; };
 		FE9BFADC23A0D59A00FBF84A /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
@@ -414,6 +432,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84C6C61B23A11B59008B6B75 /* dSYMs */ = {
+			isa = PBXGroup;
+			children = (
+				84C6C62123A11B83008B6B75 /* Quick.framework.dSYM */,
+				84C6C61F23A11B83008B6B75 /* RxBlocking.framework.dSYM */,
+				84C6C61E23A11B83008B6B75 /* RxCocoa.framework.dSYM */,
+				84C6C61C23A11B82008B6B75 /* RxRelay.framework.dSYM */,
+				84C6C61D23A11B83008B6B75 /* RxSwift.framework.dSYM */,
+				84C6C62223A11B83008B6B75 /* RxTest.framework.dSYM */,
+				84C6C62023A11B83008B6B75 /* SnapKit.framework.dSYM */,
+				84C6C62323A11B83008B6B75 /* Swinject.framework.dSYM */,
+			);
+			path = dSYMs;
+			sourceTree = "<group>";
+		};
 		FE9BF9E423A0AB2300FBF84A = {
 			isa = PBXGroup;
 			children = (
@@ -422,8 +455,8 @@
 				FE9BFA2923A0AD4C00FBF84A /* PhotoClientView */,
 				FE9BF9EF23A0AB2300FBF84A /* PhotoClient */,
 				FE9BFA8A23A0AE6500FBF84A /* Tests */,
-				FE9BFACB23A0D01000FBF84A /* dSYMs */,
 				FE9BF9EE23A0AB2300FBF84A /* Products */,
+				84C6C61B23A11B59008B6B75 /* dSYMs */,
 				FE9BFA8D23A0B02A00FBF84A /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -522,6 +555,8 @@
 				FE9BFB2723A0E50800FBF84A /* Networking.swift */,
 				FE9BFB2923A0E58800FBF84A /* NetworkError.swift */,
 				FE9BFB2B23A0E71D00FBF84A /* Network.swift */,
+				84C6C63423A11DFA008B6B75 /* PixaBay.swift */,
+				84C6C63623A11FDF008B6B75 /* PixaBay+Config.swift */,
 			);
 			path = PhotoClientModel;
 			sourceTree = "<group>";
@@ -564,19 +599,6 @@
 				FE9BFADA23A0D58100FBF84A /* Himotoki.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FE9BFACB23A0D01000FBF84A /* dSYMs */ = {
-			isa = PBXGroup;
-			children = (
-				FE9BFACE23A0D07200FBF84A /* Alamofire.framework.dSYM */,
-				FE9BFACD23A0D07200FBF84A /* Himotoki.framework.dSYM */,
-				FE9BFAD023A0D07200FBF84A /* RxCocoa.framework.dSYM */,
-				FE9BFACF23A0D07200FBF84A /* RxSwift.framework.dSYM */,
-				FE9BFAD123A0D07200FBF84A /* SnapKit.framework.dSYM */,
-				FE9BFACC23A0D07200FBF84A /* Swinject.framework.dSYM */,
-			);
-			path = dSYMs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -855,9 +877,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C6C62B23A11B83008B6B75 /* Swinject.framework.dSYM in Resources */,
+				84C6C62423A11B83008B6B75 /* RxRelay.framework.dSYM in Resources */,
 				FE9BF9FD23A0AB2500FBF84A /* LaunchScreen.storyboard in Resources */,
 				FE9BF9FA23A0AB2500FBF84A /* Assets.xcassets in Resources */,
+				84C6C62523A11B83008B6B75 /* RxSwift.framework.dSYM in Resources */,
+				84C6C62A23A11B83008B6B75 /* RxTest.framework.dSYM in Resources */,
+				84C6C62623A11B83008B6B75 /* RxCocoa.framework.dSYM in Resources */,
+				84C6C62723A11B83008B6B75 /* RxBlocking.framework.dSYM in Resources */,
 				FE9BF9F823A0AB2300FBF84A /* Main.storyboard in Resources */,
+				84C6C62923A11B83008B6B75 /* Quick.framework.dSYM in Resources */,
+				84C6C62823A11B83008B6B75 /* SnapKit.framework.dSYM in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1008,10 +1038,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C6C63523A11DFA008B6B75 /* PixaBay.swift in Sources */,
 				FE9BFB2C23A0E71D00FBF84A /* Network.swift in Sources */,
 				FE9BFB2823A0E50800FBF84A /* Networking.swift in Sources */,
 				FE9BFB2A23A0E58800FBF84A /* NetworkError.swift in Sources */,
 				FE9BFAD923A0D44A00FBF84A /* ImageEntity.swift in Sources */,
+				84C6C63723A11FDF008B6B75 /* PixaBay+Config.swift in Sources */,
 				FE9BFAEC23A0D6BE00FBF84A /* ResponseEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1227,6 +1259,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = PhotoClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1249,6 +1282,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = PhotoClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1271,7 +1305,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Tests/PhotoClientTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1296,7 +1330,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Tests/PhotoClientTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1320,6 +1354,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Tests/PhotoClientUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1343,6 +1378,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Tests/PhotoClientUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1367,6 +1403,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = PhotoClientView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1393,6 +1430,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = PhotoClientView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1418,6 +1456,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Tests/PhotoClientViewTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1440,6 +1479,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Tests/PhotoClientViewTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1463,6 +1503,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = PhotoClientViewModel/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1489,6 +1530,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = PhotoClientViewModel/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1514,6 +1556,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Tests/PhotoClientViewModelTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1536,6 +1579,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Tests/PhotoClientViewModelTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1564,6 +1608,7 @@
 				);
 				INFOPLIST_FILE = PhotoClientModel/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1596,6 +1641,7 @@
 				);
 				INFOPLIST_FILE = PhotoClientModel/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1621,6 +1667,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Tests/PhotoClientModelTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1643,6 +1690,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Tests/PhotoClientModelTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
