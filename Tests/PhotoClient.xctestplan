@@ -1,0 +1,57 @@
+{
+  "configurations" : [
+    {
+      "id" : "8C5CCDBF-69A5-4365-B7F3-32CEC198B061",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:PhotoClient.xcodeproj",
+      "identifier" : "FE9BF9EC23A0AB2300FBF84A",
+      "name" : "PhotoClient"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:PhotoClient.xcodeproj",
+        "identifier" : "FE9BFA0223A0AB2600FBF84A",
+        "name" : "PhotoClientTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:PhotoClient.xcodeproj",
+        "identifier" : "FE9BFA0D23A0AB2600FBF84A",
+        "name" : "PhotoClientUITests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:PhotoClient.xcodeproj",
+        "identifier" : "FE9BFA2F23A0AD4C00FBF84A",
+        "name" : "PhotoClientViewTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:PhotoClient.xcodeproj",
+        "identifier" : "FE9BFA5223A0AD5F00FBF84A",
+        "name" : "PhotoClientViewModelTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:PhotoClient.xcodeproj",
+        "identifier" : "FE9BFA7423A0AD7000FBF84A",
+        "name" : "PhotoClientModelTests"
+      }
+    }
+  ],
+  "version" : 1
+}
