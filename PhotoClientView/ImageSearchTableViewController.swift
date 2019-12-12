@@ -30,17 +30,10 @@ public final class ImageSearchTableViewController: UITableViewController {
         if !autoSearchStarted {
             autoSearchStarted = true
             viewModel?.startSearch()
-//            viewModel?.cellModels.subscribe(onNext: { models in
-//                DispatchQueue.main.async {
-//                    self.viewCellModels = models
-//                    self.tableView.reloadData()
-//                }
-//                }).disposed(by: disposeBag)
         }
     }
 
     public override func viewDidLoad() {
-//        viewModel = Scene
         tableView.register(ImageSearchTableViewCell.self, forCellReuseIdentifier: ImageSearchTableViewCell.identifier)
         self.title = "Pixabay Images"
     }
@@ -65,5 +58,13 @@ extension ImageSearchTableViewController {
             for: indexPath) as! ImageSearchTableViewCell
         cell.viewModel = viewCellModels[indexPath.row]
         return cell
+    }
+}
+
+// MARK: - ImageSearchTableViewController delegate
+
+extension ImageSearchTableViewController {
+    public override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0
     }
 }

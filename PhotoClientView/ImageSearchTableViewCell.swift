@@ -42,14 +42,14 @@ internal final class ImageSearchTableViewCell: UITableViewCell {
 
         tagLabel.snp.makeConstraints { (maker: ConstraintMaker) in
             maker.top.trailing.equalTo(self.contentView)
-            maker.leading.equalTo(self.previewImageView)
+            maker.leading.equalTo(self.previewImageView.snp.trailing)
             maker.height.equalTo(40.0)
         }
 
         imageSizeLabel.snp.makeConstraints { (maker: ConstraintMaker) in
             maker.top.equalTo(self.tagLabel)
             maker.bottom.trailing.equalTo(self.contentView)
-            maker.leading.equalTo(self.previewImageView)
+            maker.leading.equalTo(self.previewImageView.snp.trailing)
         }
     }
 
