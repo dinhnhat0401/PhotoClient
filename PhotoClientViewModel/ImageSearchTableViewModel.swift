@@ -12,15 +12,15 @@ import PhotoClientModel
 
 public final class ImageSearchTableViewModel: ImageSearchTableViewModeling {
     public var cellModels: Observable<[ImageSearchTableViewCellModeling]> {
-        return startSearch()
+        return _cellModels
     }
 
     public init(imageSearch: ImageSearching) {
         self.imageSearch = imageSearch
     }
 
-    public func startSearch() -> Observable<[ImageSearchTableViewCellModeling]> {
-        imageSearch.searchImages().map { response in
+    public func startSearch() {
+        _cellModels = imageSearch.searchImages().map { response in
             response.images.map { imageEntity in
                 ImageSearchTableViewCellModel(image: imageEntity)
             }
@@ -31,5 +31,5 @@ public final class ImageSearchTableViewModel: ImageSearchTableViewModeling {
 
     private let imageSearch: ImageSearching
     private let disposeBag = DisposeBag()
-//    private var _cellModels = BehaviorRelay<[ImageSearchTableViewCellModeling]>(value: [])
+    private var _cellModels = Observable<[ImageSearchTableViewCellModeling]>.just([])
 }
