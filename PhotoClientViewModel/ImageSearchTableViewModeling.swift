@@ -6,5 +6,10 @@
 //  Copyright © 2019 Dinh, Nhat. All rights reserved.
 //
 
+import RxSwift
+//import RxCocoa
+
 public protocol ImageSearchTableViewModeling {
+    var cellModels: [ImageSearchTableViewCellModeling] { get }
+    func startSearch()
 }

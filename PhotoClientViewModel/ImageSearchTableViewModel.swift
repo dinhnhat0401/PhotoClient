@@ -6,12 +6,30 @@
 //  Copyright © 2019 Dinh, Nhat. All rights reserved.
 //
 
+import RxSwift
+//import RxCocoa
 import PhotoClientModel
 
 public final class ImageSearchTableViewModel: ImageSearchTableViewModeling {
-    private let imageSearch: ImageSearching
+    public var cellModels: [ImageSearchTableViewCellModeling] = []
 
     public init(imageSearch: ImageSearching) {
         self.imageSearch = imageSearch
     }
+
+    public func startSearch() {
+        imageSearch.searchImages().map { response in
+            response.images.map { imageEntity in
+                ImageSearchTableViewCellModel(image: imageEntity)
+            }
+        }.subscribe { c in
+            self.cellModels = c.element ?? []
+        }.disposed(by: disposeBag)
+    }
+
+    // MARK: - private variables
+
+    private let imageSearch: ImageSearching
+    private let disposeBag = DisposeBag()
+//    private let _cellModels = Observable<[ImageSearchTableViewModeling]>([])
 }
