@@ -7,9 +7,9 @@
 //
 
 import RxSwift
-//import RxCocoa
+import RxCocoa
 
 public protocol ImageSearchTableViewModeling {
-    var cellModels: [ImageSearchTableViewCellModeling] { get }
-    func startSearch()
+    var cellModels: Observable<[ImageSearchTableViewCellModeling]> { get }
+//    func startSearch() -> Observable<[ImageSearchTableViewCellModeling]>
 }

@@ -7,29 +7,29 @@
 //
 
 import RxSwift
-//import RxCocoa
+import RxCocoa
 import PhotoClientModel
 
 public final class ImageSearchTableViewModel: ImageSearchTableViewModeling {
-    public var cellModels: [ImageSearchTableViewCellModeling] = []
+    public var cellModels: Observable<[ImageSearchTableViewCellModeling]> {
+        return startSearch()
+    }
 
     public init(imageSearch: ImageSearching) {
         self.imageSearch = imageSearch
     }
 
-    public func startSearch() {
+    public func startSearch() -> Observable<[ImageSearchTableViewCellModeling]> {
         imageSearch.searchImages().map { response in
             response.images.map { imageEntity in
                 ImageSearchTableViewCellModel(image: imageEntity)
             }
-        }.subscribe { c in
-            self.cellModels = c.element ?? []
-        }.disposed(by: disposeBag)
+        }
     }
 
     // MARK: - private variables
 
     private let imageSearch: ImageSearching
     private let disposeBag = DisposeBag()
-//    private let _cellModels = Observable<[ImageSearchTableViewModeling]>([])
+//    private var _cellModels = BehaviorRelay<[ImageSearchTableViewCellModeling]>(value: [])
 }

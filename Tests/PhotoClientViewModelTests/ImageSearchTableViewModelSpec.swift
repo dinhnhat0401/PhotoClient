@@ -40,8 +40,10 @@ class ImageSearchTableViewModelSpec: QuickSpec {
 //            viewModel.cellModels.producer
 //                .on(next: { cellModels = $0 })
 //                .start()
-            viewModel.startSearch()
-            let cellModels = viewModel.cellModels
+            var cellModels: [ImageSearchTableViewCellModeling] = []
+            viewModel.cellModels.subscribe { (e) in
+                cellModels = e.element ?? []
+            }.disposed(by: DisposeBag())
 
             expect(cellModels).toEventuallyNot(beNil())
             expect(cellModels.count).toEventually(equal(2))
