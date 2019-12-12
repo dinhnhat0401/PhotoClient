@@ -36,8 +36,6 @@
 		84C6C64E23A14178008B6B75 /* ImageSearchTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6C64923A140E2008B6B75 /* ImageSearchTableViewCellModel.swift */; };
 		84C6C65223A1B71C008B6B75 /* SceneDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6C64F23A1B60E008B6B75 /* SceneDelegateSpec.swift */; };
 		84C6C65523A1B94E008B6B75 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9BFADD23A0D59A00FBF84A /* RxSwift.framework */; };
-		84C6C65723A1BE6F008B6B75 /* DummyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6C65623A1BE6F008B6B75 /* DummyResponse.swift */; };
-		84C6C65923A1BEB7008B6B75 /* ImageSearchTableViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6C65823A1BEB7008B6B75 /* ImageSearchTableViewModelSpec.swift */; };
 		84C6C65A23A1BF93008B6B75 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9BFADD23A0D59A00FBF84A /* RxSwift.framework */; };
 		FE9BF9F123A0AB2300FBF84A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9BF9F023A0AB2300FBF84A /* AppDelegate.swift */; };
 		FE9BF9F323A0AB2300FBF84A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9BF9F223A0AB2300FBF84A /* SceneDelegate.swift */; };
@@ -112,6 +110,9 @@
 		FE9BFB2A23A0E58800FBF84A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9BFB2923A0E58800FBF84A /* NetworkError.swift */; };
 		FE9BFB2C23A0E71D00FBF84A /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9BFB2B23A0E71D00FBF84A /* Network.swift */; };
 		FE9BFB2F23A0EBF400FBF84A /* NetworkSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9BFB2D23A0EBD600FBF84A /* NetworkSpec.swift */; };
+		FE9BFB4C23A239A700FBF84A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9BFADD23A0D59A00FBF84A /* RxSwift.framework */; };
+		FE9BFB4D23A23BB200FBF84A /* DummyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6C65623A1BE6F008B6B75 /* DummyResponse.swift */; };
+		FE9BFB4E23A23BBA00FBF84A /* ImageSearchTableViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6C65823A1BEB7008B6B75 /* ImageSearchTableViewModelSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -391,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE9BFA9123A0B20300FBF84A /* PhotoClientViewModel.framework in Frameworks */,
+				FE9BFB4C23A239A700FBF84A /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1038,8 +1040,6 @@
 			files = (
 				84C6C64023A13416008B6B75 /* ImageSearchTableViewController.swift in Sources */,
 				84C6C64223A1344D008B6B75 /* ImageSearchTableViewCell.swift in Sources */,
-				84C6C65923A1BEB7008B6B75 /* ImageSearchTableViewModelSpec.swift in Sources */,
-				84C6C65723A1BE6F008B6B75 /* DummyResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1066,6 +1066,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE9BFB4E23A23BBA00FBF84A /* ImageSearchTableViewModelSpec.swift in Sources */,
+				FE9BFB4D23A23BB200FBF84A /* DummyResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1431,6 +1433,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PhotoClientView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1460,6 +1466,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PhotoClientView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
