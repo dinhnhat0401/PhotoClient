@@ -35,11 +35,6 @@ class ImageSearchTableViewModelSpec: QuickSpec {
         }
 
         it("eventually sets cellModels property after the search.") {
-//            var cellModels: [ImageSearchTableViewCellModeling]? = nil
-
-//            viewModel.cellModels.producer
-//                .on(next: { cellModels = $0 })
-//                .start()
             viewModel.startSearch()
             var cellModels: [ImageSearchTableViewCellModeling] = []
             viewModel.cellModels.subscribe(onNext: { (models) in
@@ -51,14 +46,15 @@ class ImageSearchTableViewModelSpec: QuickSpec {
             expect(cellModels[0].id).toEventually(equal(10000))
             expect(cellModels[1].id).toEventually(equal(10001))
         }
-//        it("sets cellModels property on the main thread.") {
-//            var onMainThread = false
-//            viewModel.cellModels.producer
-//                .on(next: { _ in onMainThread = NSThread.isMainThread() })
-//                .start()
-//            viewModel.startSearch()
-//
-//            expect(onMainThread).toEventually(beTrue())
-//        }
+
+        it("sets cellModels property on the main thread.") {
+            var onMainThread = false
+            viewModel.startSearch()
+            viewModel.cellModels.subscribe(onNext: { (models) in
+                onMainThread = Thread.isMainThread
+                }).disposed(by: DisposeBag())
+            
+            expect(onMainThread).toEventually(beTrue())
+        }
     }
 }
