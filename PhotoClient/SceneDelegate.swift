@@ -44,7 +44,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
 
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = UINavigationController(rootViewController: ImageSearchTableViewController())
+        window.rootViewController = UINavigationController(rootViewController: container.resolve(ImageSearchTableViewController.self)!)
         self.window = window
         window.makeKeyAndVisible()
     }

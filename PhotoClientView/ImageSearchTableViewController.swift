@@ -8,24 +8,63 @@
 
 import UIKit
 import PhotoClientViewModel
+import RxSwift
 
 public final class ImageSearchTableViewController: UITableViewController {
+    public var viewModel: ImageSearchTableViewModeling? {
+        didSet {
+            if let viewModel = viewModel {
+                viewModel.cellModels.subscribe(onNext: { models in
+                    DispatchQueue.main.async {
+                        self.viewCellModels = models
+                        self.tableView.reloadData()
+                    }
+                    }).disposed(by: disposeBag)
+            }
+        }
+    }
 
-    public var viewModel: ImageSearchTableViewModeling?
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if !autoSearchStarted {
+            autoSearchStarted = true
+            viewModel?.startSearch()
+        }
+    }
 
     public override func viewDidLoad() {
+        tableView.register(ImageSearchTableViewCell.self, forCellReuseIdentifier: ImageSearchTableViewCell.identifier)
         self.title = "Pixabay Images"
     }
+
+    // MARK: - private variables
+
+    private var disposeBag = DisposeBag()
+    private var autoSearchStarted = false
+    private var viewCellModels: [ImageSearchTableViewCellModeling] = []
 }
 
 // MARK: - ImageSearchTableViewController datasource
 
 extension ImageSearchTableViewController {
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewCellModels.count
     }
 
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return ImageSearchTableViewCell()
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: ImageSearchTableViewCell.identifier,
+            for: indexPath) as! ImageSearchTableViewCell
+        cell.viewModel = viewCellModels[indexPath.row]
+        return cell
+    }
+}
+
+// MARK: - ImageSearchTableViewController delegate
+
+extension ImageSearchTableViewController {
+    public override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0
     }
 }
