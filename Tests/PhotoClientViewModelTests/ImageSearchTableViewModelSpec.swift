@@ -26,12 +26,30 @@ class ImageSearchTableViewModelSpec: QuickSpec {
         }
     }
 
+    class StubNetwork: Networking {
+        func requestJSON(url: String, parameters: [String : Any]?) -> Observable<Any> {
+            return Observable.create { (observable) -> Disposable in
+                observable.onCompleted()
+
+                return Disposables.create()
+            }
+        }
+
+        func requestImage(url: String) -> Observable<UIImage> {
+            return Observable.create { (observable) -> Disposable in
+                observable.onCompleted()
+
+                return Disposables.create()
+            }
+        }
+    }
+
     // MARK: spec
 
     override func spec() {
         var viewModel: ImageSearchTableViewModel!
         beforeEach {
-            viewModel = ImageSearchTableViewModel(imageSearch: StubImageSearch())
+            viewModel = ImageSearchTableViewModel(imageSearch: StubImageSearch(), network: StubNetwork())
         }
 
         it("eventually sets cellModels property after the search.") {

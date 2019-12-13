@@ -34,7 +34,10 @@ class ImageSearchSpec: QuickSpec {
         }
 
         func requestImage(url: String) -> Observable<UIImage> {
-            return Observable.just(UIImage())
+            return Observable.create { (observer) -> Disposable in
+                observer.onCompleted()
+                return Disposables.create()
+            }
         }
     }
 

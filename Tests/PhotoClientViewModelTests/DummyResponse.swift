@@ -6,6 +6,8 @@
 //  Copyright © 2019 Dinh, Nhat. All rights reserved.
 //
 
+import UIKit
+
 @testable import PhotoClientModel
 @testable import PhotoClientViewModel
 
@@ -45,3 +47,9 @@ let dummyResponse: ResponseEntity = {
     return ResponseEntity(totalCount: 123, images: [image0, image1])
 }()
 
+let image1x1: UIImage = {
+    UIGraphicsBeginImageContextWithOptions(CGSize(width: 1.0, height: 1.0), true, 0)
+    let image = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+    return image!
+}()
