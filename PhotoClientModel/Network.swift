@@ -59,6 +59,6 @@ public final class Network: Networking {
             }
 
             return Disposables.create()
-        }
+        }.observeOn(MainScheduler.instance)
     }
 }
