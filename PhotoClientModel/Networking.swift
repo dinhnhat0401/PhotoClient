@@ -7,8 +7,9 @@
 //
 
 import RxSwift
-//import RxCocoa
+import UIKit
 
 public protocol Networking {
     func requestJSON(url: String, parameters: [String: Any]?) -> Observable<Any>
+    func requestImage(url: String) -> Observable<UIImage>
 }

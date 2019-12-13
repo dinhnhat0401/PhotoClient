@@ -32,6 +32,10 @@ class ImageSearchSpec: QuickSpec {
                 return Disposables.create()
             }
         }
+
+        func requestImage(url: String) -> Observable<UIImage> {
+            return Observable.just(UIImage())
+        }
     }
 
     class BadStubNetwork: Networking {
@@ -43,6 +47,10 @@ class ImageSearchSpec: QuickSpec {
                 return Disposables.create()
             }
         }
+
+        func requestImage(url: String) -> Observable<UIImage> {
+            return Observable.just(UIImage())
+        }
     }
 
     class ErrorStubNetwork: Networking {
@@ -52,6 +60,10 @@ class ImageSearchSpec: QuickSpec {
                 observer.onCompleted()
                 return Disposables.create()
             }
+        }
+
+        func requestImage(url: String) -> Observable<UIImage> {
+            return Observable.just(UIImage())
         }
     }
 
