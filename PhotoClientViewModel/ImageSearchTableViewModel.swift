@@ -13,14 +13,15 @@ import PhotoClientModel
 public final class ImageSearchTableViewModel: ImageSearchTableViewModeling {
     public var cellModels = BehaviorRelay<[ImageSearchTableViewCellModeling]>(value: [])
 
-    public init(imageSearch: ImageSearching) {
+    public init(imageSearch: ImageSearching, network: Networking) {
         self.imageSearch = imageSearch
+        self.network = network
     }
 
     public func startSearch() {
         imageSearch.searchImages().map { response in
             response.images.map { imageEntity in
-                ImageSearchTableViewCellModel(image: imageEntity)
+                ImageSearchTableViewCellModel(image: imageEntity, network: self.network)
             }
         }.subscribe(onNext: { (models) in
             self.cellModels.accept(models)
@@ -30,6 +31,7 @@ public final class ImageSearchTableViewModel: ImageSearchTableViewModeling {
     // MARK: - private variables
 
     private let imageSearch: ImageSearching
+    private let network: Networking
     private let disposeBag = DisposeBag()
 //    private var _cellModels = Observable<[ImageSearchTableViewCellModeling]>.just([])
 }

@@ -114,6 +114,8 @@
 		FE9BFB4C23A239A700FBF84A /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9BFADD23A0D59A00FBF84A /* RxSwift.framework */; };
 		FE9BFB4D23A23BB200FBF84A /* DummyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6C65623A1BE6F008B6B75 /* DummyResponse.swift */; };
 		FE9BFB4E23A23BBA00FBF84A /* ImageSearchTableViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6C65823A1BEB7008B6B75 /* ImageSearchTableViewModelSpec.swift */; };
+		FE9BFB5123A35C6700FBF84A /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9BFB4F23A35C5100FBF84A /* SnapKit.framework */; };
+		FE9BFB5223A35CA200FBF84A /* SnapKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = FE9BFB4F23A35C5100FBF84A /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -261,6 +263,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				FE9BFB5223A35CA200FBF84A /* SnapKit.framework in Copy Frameworks */,
 				FE9BFB1D23A0E38500FBF84A /* RxRelay.framework in Copy Frameworks */,
 				FE9BFB1E23A0E38500FBF84A /* Quick.framework in Copy Frameworks */,
 				FE9BFB1F23A0E38500FBF84A /* Nimble.framework in Copy Frameworks */,
@@ -355,6 +358,7 @@
 		FE9BFB2923A0E58800FBF84A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		FE9BFB2B23A0E71D00FBF84A /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		FE9BFB2D23A0EBD600FBF84A /* NetworkSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSpec.swift; sourceTree = "<group>"; };
+		FE9BFB4F23A35C5100FBF84A /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -406,6 +410,7 @@
 				FE9BFA3123A0AD4C00FBF84A /* PhotoClientView.framework in Frameworks */,
 				FE9BFB0523A0DFD000FBF84A /* Quick.framework in Frameworks */,
 				FE9BFB0923A0DFE000FBF84A /* Nimble.framework in Frameworks */,
+				FE9BFB5123A35C6700FBF84A /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,6 +627,7 @@
 		FE9BFA8D23A0B02A00FBF84A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FE9BFB4F23A35C5100FBF84A /* SnapKit.framework */,
 				FE9BFB0C23A0E15000FBF84A /* RxRelay.framework */,
 				FE9BFAE923A0D5F700FBF84A /* Quick.framework */,
 				FE9BFAE723A0D5F500FBF84A /* Nimble.framework */,

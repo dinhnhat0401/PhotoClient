@@ -43,8 +43,39 @@ class NetworkSpec: QuickSpec {
                         error = e.error as? NetworkError
                     }).disposed(by: self.disposeBag)
 
-                expect(error)
-                    .toEventually(equal(NetworkError.Unknown), timeout: 5)
+                expect(error).toEventually(equal(NetworkError.Unknown), timeout: 5)
+            }
+        }
+
+        describe("Image") {
+            it("eventually gets an image.") {
+                var image: UIImage?
+                network
+                    .requestImage(url: "https://httpbin.org/image/jpeg")
+                    .subscribe(onNext: {
+                        image = $0
+                    }).disposed(by: self.disposeBag)
+                expect(image).toEventuallyNot(beNil(), timeout: 5)
+            }
+
+            it("eventually gets an error if incorrect data for an image is returned.") {
+                var error: NetworkError?
+                network.requestImage(url: "https://httpbin.org/get")
+                    .subscribe ({ (e) in
+                        error = e.error as? NetworkError
+                    }).disposed(by: self.disposeBag)
+
+               expect(error).toEventually(equal(NetworkError.IncorrectDataReturned), timeout: 5)
+            }
+
+            it("eventually gets an error if the network has a problem.") {
+                var error: NetworkError? = nil
+                network.requestImage(url: "https://not.existing.server.comm/image/jpeg")
+                    .subscribe ({ (e) in
+                        error = e.error as? NetworkError
+                    }).disposed(by: self.disposeBag)
+
+                expect(error).toEventually(equal(NetworkError.Unknown), timeout: 5)
             }
         }
     }
