@@ -20,11 +20,11 @@ public final class ImageSearchTableViewModel: ImageSearchTableViewModeling {
 
     public func startSearch() {
         imageSearch.searchImages().map { response in
-            response.images.map { imageEntity in
-                ImageSearchTableViewCellModel(image: imageEntity, network: self.network)
+            response.images.map { [weak self] imageEntity in
+                return ImageSearchTableViewCellModel(image: imageEntity, network: self?.network)
             }
-        }.subscribe(onNext: { (models) in
-            self.cellModels.accept(models)
+        }.subscribe(onNext: { [weak self] (models) in
+            self?.cellModels.accept(models)
             }).disposed(by: disposeBag)
     }
 

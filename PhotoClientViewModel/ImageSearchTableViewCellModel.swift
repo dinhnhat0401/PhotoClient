@@ -16,11 +16,11 @@ public final class ImageSearchTableViewCellModel: ImageSearchTableViewCellModeli
     public let pageImageSizeText: String
     public let tagText: String
 
-    private let network: Networking
+    private let network: Networking?
     private let previewURL: String
     private var previewImage: UIImage?
 
-    internal init(image: ImageEntity, network: Networking) {
+    internal init(image: ImageEntity, network: Networking?) {
         id = image.id
         pageImageSizeText = "\(image.pageImageWidth) x \(image.pageImageHeight)"
         tagText = image.tags.joined(separator: ", ")
@@ -32,6 +32,10 @@ public final class ImageSearchTableViewCellModel: ImageSearchTableViewCellModeli
     public func getPreviewImage() -> Observable<UIImage?> {
         if let previewImage = self.previewImage {
             return Observable.just(previewImage).observeOn(MainScheduler.instance)
+        }
+
+        guard let network = network else {
+            return Observable.just(nil).observeOn(MainScheduler.instance)
         }
 
         return network.requestImage(url: previewURL)
