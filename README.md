@@ -31,6 +31,7 @@ To run tests:
 
 `Command` + U
 
+![](https://i.imgur.com/aYkEqQO.gif)
 
 ### Requirements
 
