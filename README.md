@@ -11,6 +11,7 @@ MVVM + RxSwift + Unit testing
 - Quick + Nimble - Unit test
 - Swinject - Dependency injection
 - SnapKit - Autolayout
+- Himotoki - decode JSON response to Object
 
 - Carthage - Dependency manage tool
 - SwiftLint - To be implemented
