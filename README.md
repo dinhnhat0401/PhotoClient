@@ -11,7 +11,8 @@ MVVM + RxSwift + Unit testing
 - Quick + Nimble - Unit test
 - Swinject - Dependency injection
 - SnapKit - Autolayout
-- Himotoki - serialize json string response to dictionary object and then map it to an Entity object
+- Alamofire - HTTP networking library and JSON serialization
+- Himotoki - map dictionary object to Entity object
 
 - Carthage - Dependency manage tool
 - SwiftLint - To be implemented
