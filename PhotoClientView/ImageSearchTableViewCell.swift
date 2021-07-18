@@ -13,7 +13,7 @@ import UIKit
 
 internal final class ImageSearchTableViewCell: UITableViewCell {
     static let identifier = "ImageSearchTableViewCell"
-
+    static var count = 0
     internal var viewModel: ImageSearchTableViewCellModeling? {
         didSet {
             tagLabel.text = viewModel?.tagText
@@ -39,6 +39,8 @@ internal final class ImageSearchTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        print("called \(ImageSearchTableViewCell.count)")
+        ImageSearchTableViewCell.count += 1
         previewImageView.contentMode = .scaleAspectFit
         self.contentView.addSubview(previewImageView)
         self.contentView.addSubview(tagLabel)

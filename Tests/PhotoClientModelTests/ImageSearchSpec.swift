@@ -9,6 +9,8 @@
 import Quick
 import Nimble
 import RxSwift
+import UIKit
+
 @testable import PhotoClientModel
 
 class ImageSearchSpec: QuickSpec {

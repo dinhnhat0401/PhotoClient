@@ -9,6 +9,7 @@
 import Quick
 import Nimble
 import RxSwift
+import UIKit
 
 @testable import PhotoClientModel
 @testable import PhotoClientViewModel
@@ -27,7 +28,7 @@ class ImageSearchTableViewCellModelSpec: QuickSpec {
             return Observable.create { (observable) -> Disposable in
                 observable.onNext(image1x1)
                 return Disposables.create()
-            }.observeOn(CurrentThreadScheduler.instance)
+            }.observe(on: CurrentThreadScheduler.instance)
         }
     }
 

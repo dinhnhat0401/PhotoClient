@@ -10,9 +10,11 @@ import Quick
 import Nimble
 import RxSwift
 import Alamofire
+import UIKit
 @testable import PhotoClientModel
 
 class NetworkSpec: QuickSpec {
+    private let timeout = DispatchTimeInterval.seconds(5)
     override func spec() {
         var network: Network!
         beforeEach {
@@ -28,11 +30,11 @@ class NetworkSpec: QuickSpec {
                         json = $0 as? [String: Any]
                     }).disposed(by: self.disposeBag)
 
-                expect(json).toEventuallyNot(beNil(), timeout: 5)
+                expect(json).toEventuallyNot(beNil(), timeout: self.timeout)
                 expect((json?["args"] as? [String: AnyObject])?["a"] as? String)
-                    .toEventually(equal("b"), timeout: 5)
+                    .toEventually(equal("b"), timeout: self.timeout)
                 expect((json?["args"] as? [String: AnyObject])?["x"] as? String)
-                    .toEventually(equal("y"), timeout: 5)
+                    .toEventually(equal("y"), timeout: self.timeout)
             }
 
             it("eventually gets an error if the network has a problem.") {
@@ -43,7 +45,7 @@ class NetworkSpec: QuickSpec {
                         error = e.error as? NetworkError
                     }).disposed(by: self.disposeBag)
 
-                expect(error).toEventually(equal(NetworkError.Unknown), timeout: 5)
+                expect(error).toEventually(equal(NetworkError.Unknown), timeout: self.timeout)
             }
         }
 
@@ -55,7 +57,7 @@ class NetworkSpec: QuickSpec {
                     .subscribe(onNext: {
                         image = $0
                     }).disposed(by: self.disposeBag)
-                expect(image).toEventuallyNot(beNil(), timeout: 5)
+                expect(image).toEventuallyNot(beNil(), timeout: self.timeout)
             }
 
             it("eventually gets an error if incorrect data for an image is returned.") {
@@ -65,7 +67,7 @@ class NetworkSpec: QuickSpec {
                         error = e.error as? NetworkError
                     }).disposed(by: self.disposeBag)
 
-               expect(error).toEventually(equal(NetworkError.IncorrectDataReturned), timeout: 5)
+               expect(error).toEventually(equal(NetworkError.IncorrectDataReturned), timeout: self.timeout)
             }
 
             it("eventually gets an error if the network has a problem.") {
@@ -75,7 +77,7 @@ class NetworkSpec: QuickSpec {
                         error = e.error as? NetworkError
                     }).disposed(by: self.disposeBag)
 
-                expect(error).toEventually(equal(NetworkError.Unknown), timeout: 5)
+                expect(error).toEventually(equal(NetworkError.Unknown), timeout: self.timeout)
             }
         }
     }

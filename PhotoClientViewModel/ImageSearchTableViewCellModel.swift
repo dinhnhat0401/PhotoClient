@@ -31,7 +31,7 @@ public final class ImageSearchTableViewCellModel: ImageSearchTableViewCellModeli
 
     public func getPreviewImage() -> Observable<UIImage?> {
         if let previewImage = self.previewImage {
-            return Observable.just(previewImage).observeOn(MainScheduler.instance)
+            return Observable.just(previewImage).observe(on: MainScheduler.instance)
         }
 
         return network.requestImage(url: previewURL)
