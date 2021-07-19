@@ -6,7 +6,7 @@
 //  Copyright © 2019 Dinh, Nhat. All rights reserved.
 //
 
-import Himotoki
+import SwiftyJSON
 
 public struct ResponseEntity {
     public let totalCount: Int64
@@ -15,10 +15,19 @@ public struct ResponseEntity {
 
 // MARK: Decodable
 extension ResponseEntity: Decodable {
-    public static func decode(_ e: Extractor) throws -> ResponseEntity {
-        return try ResponseEntity(
-            totalCount: e <| "totalHits",
-            images: e <| "hits"
+    public static func decode(_ e: JSON) throws -> ResponseEntity {
+        guard let totalHits = e["totalHits"].int64, let imagesJson = e["hits"].array else {
+            throw NetworkError.IncorrectDataReturned
+        }
+
+        var images = [ImageEntity]()
+        for json in imagesJson {
+            images.append(try ImageEntity.decode(json))
+        }
+
+        return ResponseEntity(
+            totalCount: totalHits,
+            images: images
         )
     }
 }

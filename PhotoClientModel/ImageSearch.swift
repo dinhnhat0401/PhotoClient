@@ -7,7 +7,7 @@
 //
 
 import RxSwift
-import Himotoki
+import SwiftyJSON
 
 public final class ImageSearch: ImageSearching {
     public init(network: Networking) {
@@ -25,7 +25,7 @@ public final class ImageSearch: ImageSearching {
 
             return self.network.requestJSON(url: url, parameters: parameters)
                 .subscribe(onNext: { (json) in
-                    if let response = (try? decodeValue(json)) as ResponseEntity? {
+                    if let response = try? ResponseEntity.decode(JSON(json)) {
                         observer.onNext(response)
                         return
                     }

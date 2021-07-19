@@ -23,7 +23,6 @@
 		84F45B5E26A4629A008C9170 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 84F45B5D26A4629A008C9170 /* RxCocoa */; };
 		84F45B6026A4629A008C9170 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 84F45B5F26A4629A008C9170 /* RxSwift */; };
 		84F45B6B26A462DF008C9170 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 84F45B6A26A462DF008C9170 /* Alamofire */; };
-		84F45B7A26A46323008C9170 /* Himotoki in Frameworks */ = {isa = PBXBuildFile; productRef = 84F45B7926A46323008C9170 /* Himotoki */; };
 		84F45B8526A46346008C9170 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 84F45B8426A46346008C9170 /* SnapKit */; };
 		84F45B9026A46383008C9170 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 84F45B8F26A46383008C9170 /* Swinject */; };
 		84F45B9B26A463F4008C9170 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 84F45B9A26A463F4008C9170 /* Quick */; };
@@ -32,6 +31,7 @@
 		84F45BAE26A464A7008C9170 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 84F45BAD26A464A7008C9170 /* Nimble */; };
 		84F45BB426A464B7008C9170 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 84F45BB326A464B7008C9170 /* Nimble */; };
 		84F45BBA26A464EC008C9170 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 84F45BB926A464EC008C9170 /* Nimble */; };
+		84F45BCD26A46C36008C9170 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 84F45BCC26A46C36008C9170 /* SwiftyJSON */; };
 		FE9BF9F123A0AB2300FBF84A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9BF9F023A0AB2300FBF84A /* AppDelegate.swift */; };
 		FE9BF9F323A0AB2300FBF84A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9BF9F223A0AB2300FBF84A /* SceneDelegate.swift */; };
 		FE9BF9FA23A0AB2500FBF84A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE9BF9F923A0AB2500FBF84A /* Assets.xcassets */; };
@@ -336,9 +336,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84F45B7A26A46323008C9170 /* Himotoki in Frameworks */,
 				84F45B6B26A462DF008C9170 /* Alamofire in Frameworks */,
 				84F45B6026A4629A008C9170 /* RxSwift in Frameworks */,
+				84F45BCD26A46C36008C9170 /* SwiftyJSON in Frameworks */,
 				84F45B5E26A4629A008C9170 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -707,7 +707,7 @@
 				84F45B5D26A4629A008C9170 /* RxCocoa */,
 				84F45B5F26A4629A008C9170 /* RxSwift */,
 				84F45B6A26A462DF008C9170 /* Alamofire */,
-				84F45B7926A46323008C9170 /* Himotoki */,
+				84F45BCC26A46C36008C9170 /* SwiftyJSON */,
 			);
 			productName = PhotoClientModel;
 			productReference = FE9BFA6D23A0AD7000FBF84A /* PhotoClientModel.framework */;
@@ -792,10 +792,10 @@
 				84F45B1D26A46014008C9170 /* XCRemoteSwiftPackageReference "Nimble" */,
 				84F45B5C26A4629A008C9170 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				84F45B6926A462DF008C9170 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				84F45B7826A46323008C9170 /* XCRemoteSwiftPackageReference "Himotoki" */,
 				84F45B8326A46346008C9170 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				84F45B8E26A46383008C9170 /* XCRemoteSwiftPackageReference "Swinject" */,
 				84F45B9926A463F4008C9170 /* XCRemoteSwiftPackageReference "Quick" */,
+				84F45BCB26A46C36008C9170 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = FE9BF9EE23A0AB2300FBF84A /* Products */;
 			projectDirPath = "";
@@ -1697,14 +1697,6 @@
 				minimumVersion = 5.4.3;
 			};
 		};
-		84F45B7826A46323008C9170 /* XCRemoteSwiftPackageReference "Himotoki" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ikesyo/Himotoki.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
 		84F45B8326A46346008C9170 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -1729,6 +1721,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		84F45BCB26A46C36008C9170 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1746,11 +1746,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 84F45B6926A462DF008C9170 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		84F45B7926A46323008C9170 /* Himotoki */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 84F45B7826A46323008C9170 /* XCRemoteSwiftPackageReference "Himotoki" */;
-			productName = Himotoki;
 		};
 		84F45B8426A46346008C9170 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1791,6 +1786,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 84F45B1D26A46014008C9170 /* XCRemoteSwiftPackageReference "Nimble" */;
 			productName = Nimble;
+		};
+		84F45BCC26A46C36008C9170 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84F45BCB26A46C36008C9170 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
