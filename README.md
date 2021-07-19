@@ -12,7 +12,7 @@ MVVM + RxSwift + Unit testing
 - Swinject - Dependency injection
 - SnapKit - Autolayout
 - Alamofire - HTTP networking library and JSON serialization
-- Himotoki - map dictionary object to Entity object
+- SwiftyJSON - map dictionary object to Entity object
 
 - Carthage - Dependency manage tool
 - SwiftLint - To be implemented
