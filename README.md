@@ -38,7 +38,7 @@ To run tests:
 ### Requirements
 
 - Swift 5.0
-- Xcode 11.2.1
+- Xcode 11.2.1+ 
 
 
 ### References
