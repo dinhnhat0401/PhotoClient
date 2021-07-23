@@ -19,17 +19,17 @@ internal final class ImageSearchTableViewCell: UITableViewCell {
             tagLabel.text = viewModel?.tagText
             imageSizeLabel.text = viewModel?.pageImageSizeText
 
-            if let viewModel = viewModel {
-                viewModel.getPreviewImage()
-                    .subscribe(onNext: { [weak self] (image) in
-                        if let image = image {
-                            self?.previewImageView.image = image
-                        }
-                    }).disposed(by: self.disposeBag)
-            }
-            else {
-                previewImageView.image = nil
-            }
+//            if let viewModel = viewModel {
+//                viewModel.getPreviewImage()
+//                    .subscribe(onNext: { [weak self] (image) in
+//                        if let image = image {
+//                            self?.previewImageView.image = image
+//                        }
+//                    }).disposed(by: self.disposeBag)
+//            }
+//            else {
+//                previewImageView.image = nil
+//            }
         }
     }
 
@@ -64,6 +64,16 @@ internal final class ImageSearchTableViewCell: UITableViewCell {
             maker.bottom.trailing.equalTo(self.contentView)
             maker.leading.equalTo(self.previewImageView.snp.trailing).offset(10.0)
         }
+    }
+
+    func getPreviewImage() {
+        self.viewModel?.getPreviewImage()
+            .subscribe(onNext: { [weak self] (image) in
+                if let image = image {
+                    self?.previewImageView.image = image
+                    self?.viewModel?.setPreviewImage(image)
+                }
+            }).disposed(by: self.disposeBag)
     }
 
     required init?(coder: NSCoder) {

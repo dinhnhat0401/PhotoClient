@@ -77,6 +77,14 @@ public final class Network: Networking {
         }.observe(on: MainScheduler.instance)
     }
 
+    public func cancelRequestImage(url: String) {
+        guard let url = URL(string: url) else {
+            return
+        }
+
+        self.imageService.cancel(url: url)
+    }
+
     // MARK: - private variables
 
     private let imageService = Loader.ImageService()

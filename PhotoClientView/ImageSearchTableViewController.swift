@@ -35,6 +35,7 @@ public final class ImageSearchTableViewController: UITableViewController {
 
     public override func viewDidLoad() {
         tableView.register(ImageSearchTableViewCell.self, forCellReuseIdentifier: ImageSearchTableViewCell.identifier)
+        self.tableView.prefetchDataSource = self
         self.title = "Pixabay Images"
     }
 
@@ -57,7 +58,18 @@ extension ImageSearchTableViewController {
             withIdentifier: ImageSearchTableViewCell.identifier,
             for: indexPath) as! ImageSearchTableViewCell
         cell.viewModel = viewCellModels[indexPath.row]
+        cell.getPreviewImage()
         return cell
+    }
+}
+
+extension ImageSearchTableViewController: UITableViewDataSourcePrefetching {
+    public func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        print("Prefetch: \(indexPaths)")
+    }
+
+    public func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
+        print("Canceling prefetch: \(indexPaths)")
     }
 }
 
