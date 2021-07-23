@@ -35,6 +35,10 @@ public class ImageService {
         }
     }
 
+    public func cancel(url: URL) {
+        self.request.cancel(url: url)
+    }
+
     let cache: ImageCacheService
     let request: ImageRequestService
 }
