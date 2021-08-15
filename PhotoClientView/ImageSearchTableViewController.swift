@@ -21,7 +21,6 @@ public final class ImageSearchTableViewController: UITableViewController {
         tableView.register(ImageSearchTableViewCell.self, forCellReuseIdentifier: ImageSearchTableViewCell.identifier)
         self.tableView.prefetchDataSource = self
         self.title = "Pixabay Images"
-
         viewModel?.startSearch().subscribe(onNext: { models in
             DispatchQueue.main.async {
                 self.viewCellModels = models
@@ -35,13 +34,14 @@ public final class ImageSearchTableViewController: UITableViewController {
     private var disposeBag = DisposeBag()
     private var viewCellModels: [ImageSearchTableViewCellModeling] = []
 
-    private func goImageDetails() {
+    private func goImageDetails(_ startedAt: Int) {
         guard
             let imageDetailsViewController = ImageDetailsViewController.instantiate("ImageDetails"),
             let viewModel = self.viewModel else {
             return
         }
         imageDetailsViewController.viewModel = ImageDetailsViewModel(viewModel)
+        imageDetailsViewController.startedAt = startedAt
         self.navigationController?.pushViewController(imageDetailsViewController, animated: true)
     }
 }
@@ -88,6 +88,6 @@ extension ImageSearchTableViewController {
     }
 
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        goImageDetails()
+        goImageDetails(indexPath.row)
     }
 }
