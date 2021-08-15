@@ -30,7 +30,6 @@ public final class ImageSearchTableViewCellModel: ImageSearchTableViewCellModeli
             return Observable.just(previewImage).observe(on: MainScheduler.instance)
         }
 
-        print(previewURL)
         return network.requestImage(url: previewURL)
             .map { $0 as UIImage? }
     }

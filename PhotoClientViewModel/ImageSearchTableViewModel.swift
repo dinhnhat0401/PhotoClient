@@ -11,27 +11,26 @@ import RxCocoa
 import PhotoClientModel
 
 public final class ImageSearchTableViewModel: ImageSearchTableViewModeling {
-    public var cellModels = BehaviorRelay<[ImageSearchTableViewCellModeling]>(value: [])
+
+    public var imageEntities: [ImageEntity]?
+    public let network: Networking
 
     public init(imageSearch: ImageSearching, network: Networking) {
         self.imageSearch = imageSearch
         self.network = network
     }
 
-    public func startSearch() {
-        imageSearch.searchImages().map { response in
-            response.images.map { imageEntity in
+    public func startSearch() -> Observable<[ImageSearchTableViewCellModeling]> {
+        return imageSearch.searchImages().map { response in
+            self.imageEntities = response.images
+            return response.images.map { imageEntity in
                 ImageSearchTableViewCellModel(image: imageEntity, network: self.network)
             }
-        }.subscribe(onNext: { (models) in
-            self.cellModels.accept(models)
-            }).disposed(by: disposeBag)
+        }
     }
 
     // MARK: - private variables
 
     private let imageSearch: ImageSearching
-    private let network: Networking
-    private let disposeBag = DisposeBag()
-//    private var _cellModels = Observable<[ImageSearchTableViewCellModeling]>.just([])
+//    private let network: Networking
 }

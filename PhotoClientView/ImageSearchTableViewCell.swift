@@ -18,18 +18,6 @@ internal final class ImageSearchTableViewCell: UITableViewCell {
         didSet {
             tagLabel.text = viewModel?.tagText
             imageSizeLabel.text = viewModel?.pageImageSizeText
-
-//            if let viewModel = viewModel {
-//                viewModel.getPreviewImage()
-//                    .subscribe(onNext: { [weak self] (image) in
-//                        if let image = image {
-//                            self?.previewImageView.image = image
-//                        }
-//                    }).disposed(by: self.disposeBag)
-//            }
-//            else {
-//                previewImageView.image = nil
-//            }
         }
     }
 
