@@ -24,8 +24,10 @@ class ImageDetailsViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         self.edgesForExtendedLayout = []
 
-//        self.imageCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
-//        self.imageCollectionView.isPagingEnabled = true
+        self.imageCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        self.imageCollectionView.isPagingEnabled = true
+
+        self.imageCollectionView.contentInset = UIEdgeInsets.zero
     }
 
     @objc func goNext() {
@@ -66,15 +68,11 @@ class ImageDetailsViewController: UIViewController, Storyboarded {
     }
 
     func updateItemSize() {
-//        let window = UIApplication.shared.windows.first
-//        let topPadding = window?.safeAreaInsets.top ?? 0.0
-//        let bottomPadding = window?.safeAreaInsets.bottom ?? 0.0
-
-//        let layout = self.imageCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
-//        layout.minimumLineSpacing = 0
-//        layout.minimumInteritemSpacing = 0
-//        layout.itemSize = CGSize(width: screenSize.width, height: screenSize.height - 100.0)
-//        layout.scrollDirection = .horizontal
+        let layout = self.imageCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
+        layout.itemSize = CGSize(width: screenSize.width, height: self.imageCollectionView.frame.size.height)
+        layout.scrollDirection = .horizontal
     }
 
     // MARK: - private variables
@@ -108,10 +106,6 @@ extension ImageDetailsViewController: UICollectionViewDelegate {
 }
 
 extension ImageDetailsViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: screenSize.width, height: screenSize.height - 100.0)
-    }
-
     func collectionView(
       _ collectionView: UICollectionView,
       layout collectionViewLayout: UICollectionViewLayout,
