@@ -15,4 +15,5 @@ public protocol ImageSearchTableViewCellModeling {
     var tagText: String { get }
 
     func getPreviewImage() -> Observable<UIImage?>
+    func setPreviewImage(_ image: UIImage?)
 }

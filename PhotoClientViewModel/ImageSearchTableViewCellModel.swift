@@ -16,10 +16,6 @@ public final class ImageSearchTableViewCellModel: ImageSearchTableViewCellModeli
     public let pageImageSizeText: String
     public let tagText: String
 
-    private let network: Networking
-    private let previewURL: String
-    private var previewImage: UIImage?
-
     internal init(image: ImageEntity, network: Networking) {
         id = image.id
         pageImageSizeText = "\(image.pageImageWidth) x \(image.pageImageHeight)"
@@ -38,7 +34,18 @@ public final class ImageSearchTableViewCellModel: ImageSearchTableViewCellModeli
             .map { $0 as UIImage? }
     }
 
+    public func cancelGetPreviewImage() {
+        self.network.cancelRequestImage(url: previewURL)
+    }
+
+    public func setPreviewImage(_ image: UIImage?) {
+        self.previewImage = image
+    }
+
     // MARK: - private variables
 
+    private let network: Networking
+    private let previewURL: String
+    private var previewImage: UIImage?
     private let disposeBag = DisposeBag()
 }

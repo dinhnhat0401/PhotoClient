@@ -11,38 +11,39 @@ import PhotoClientViewModel
 import RxSwift
 
 public final class ImageSearchTableViewController: UITableViewController {
-    public var viewModel: ImageSearchTableViewModeling? {
-        didSet {
-            if let viewModel = viewModel {
-                viewModel.cellModels.subscribe(onNext: { models in
-                    DispatchQueue.main.async {
-                        self.viewCellModels = models
-                        self.tableView.reloadData()
-                    }
-                    }).disposed(by: disposeBag)
-            }
-        }
-    }
+    public var viewModel: ImageSearchTableViewModeling?
 
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-        if !autoSearchStarted {
-            autoSearchStarted = true
-            viewModel?.startSearch()
-        }
     }
 
     public override func viewDidLoad() {
         tableView.register(ImageSearchTableViewCell.self, forCellReuseIdentifier: ImageSearchTableViewCell.identifier)
+        self.tableView.prefetchDataSource = self
         self.title = "Pixabay Images"
+        viewModel?.startSearch().subscribe(onNext: { models in
+            DispatchQueue.main.async {
+                self.viewCellModels = models
+                self.tableView.reloadData()
+            }
+        }).disposed(by: disposeBag)
     }
 
     // MARK: - private variables
 
     private var disposeBag = DisposeBag()
-    private var autoSearchStarted = false
     private var viewCellModels: [ImageSearchTableViewCellModeling] = []
+
+    private func goImageDetails(_ startedAt: Int) {
+        guard
+            let imageDetailsViewController = ImageDetailsViewController.instantiate("ImageDetails"),
+            let viewModel = self.viewModel else {
+            return
+        }
+        imageDetailsViewController.viewModel = ImageDetailsViewModel(viewModel)
+        imageDetailsViewController.startedAt = startedAt
+        self.navigationController?.pushViewController(imageDetailsViewController, animated: true)
+    }
 }
 
 // MARK: - ImageSearchTableViewController datasource
@@ -57,7 +58,25 @@ extension ImageSearchTableViewController {
             withIdentifier: ImageSearchTableViewCell.identifier,
             for: indexPath) as! ImageSearchTableViewCell
         cell.viewModel = viewCellModels[indexPath.row]
+        cell.getPreviewImage()
         return cell
+    }
+}
+
+extension ImageSearchTableViewController: UITableViewDataSourcePrefetching {
+    public func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        print("Prefetch: \(indexPaths)")
+        for indexPath in indexPaths {
+            let cell = tableView.dequeueReusableCell(
+                withIdentifier: ImageSearchTableViewCell.identifier,
+                for: indexPath) as! ImageSearchTableViewCell
+            cell.viewModel = viewCellModels[indexPath.row]
+            cell.getPreviewImage()
+        }
+    }
+
+    public func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
+        print("Canceling prefetch: \(indexPaths)")
     }
 }
 
@@ -66,5 +85,9 @@ extension ImageSearchTableViewController {
 extension ImageSearchTableViewController {
     public override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200.0
+    }
+
+    public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        goImageDetails(indexPath.row)
     }
 }

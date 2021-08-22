@@ -6,10 +6,13 @@
 //  Copyright © 2019 Dinh, Nhat. All rights reserved.
 //
 
+import PhotoClientModel
 import RxSwift
 import RxCocoa
 
 public protocol ImageSearchTableViewModeling {
-    var cellModels: BehaviorRelay<[ImageSearchTableViewCellModeling]> { get }
-    func startSearch()
+    var imageEntities: [ImageEntity]? { get }
+    var network: Networking { get }
+
+    func startSearch() -> Observable<[ImageSearchTableViewCellModeling]>
 }
