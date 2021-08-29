@@ -13,6 +13,8 @@ public protocol ImageSearchTableViewCellModeling {
     var id: UInt64 { get }
     var pageImageSizeText: String { get }
     var tagText: String { get }
+    var previewURL: String { get }
+    var previewImage: UIImage? { get }
 
     func getPreviewImage() -> Observable<UIImage?>
     func setPreviewImage(_ image: UIImage?)
