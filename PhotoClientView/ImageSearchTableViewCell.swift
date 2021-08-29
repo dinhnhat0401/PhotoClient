@@ -54,15 +54,21 @@ internal final class ImageSearchTableViewCell: UITableViewCell {
         }
     }
 
-    func getPreviewImage() {
-        self.viewModel?.getPreviewImage()
-            .subscribe(onNext: { [weak self] (image) in
-                if let image = image {
-                    self?.previewImageView.image = image
-                    self?.viewModel?.setPreviewImage(image)
-                }
-            }).disposed(by: self.disposeBag)
-    }
+//    override func prepareForReuse() {
+//        super.prepareForReuse()
+//        self.imageView?.image = nil
+//    }
+
+//    func getPreviewImage() {
+//        self.viewModel?.getPreviewImage()
+//            .subscribe(onNext: { [weak self] (image) in
+//                if let image = image {
+//                    print("called for image \(self?.viewModel?.id)")
+//                    self?.previewImageView.image = image
+//                    self?.viewModel?.setPreviewImage(image)
+//                }
+//            }).disposed(by: self.disposeBag)
+//    }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

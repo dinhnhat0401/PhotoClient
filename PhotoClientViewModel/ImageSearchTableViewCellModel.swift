@@ -15,6 +15,8 @@ public final class ImageSearchTableViewCellModel: ImageSearchTableViewCellModeli
     public let id: UInt64
     public let pageImageSizeText: String
     public let tagText: String
+    public let previewURL: String
+    public var previewImage: UIImage?
 
     internal init(image: ImageEntity, network: Networking) {
         id = image.id
@@ -45,7 +47,5 @@ public final class ImageSearchTableViewCellModel: ImageSearchTableViewCellModeli
     // MARK: - private variables
 
     private let network: Networking
-    private let previewURL: String
-    private var previewImage: UIImage?
     private let disposeBag = DisposeBag()
 }
