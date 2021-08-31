@@ -14,7 +14,7 @@ MVVM + RxSwift + Unit testing
 - Alamofire - HTTP networking library and JSON serialization
 - SwiftyJSON - map dictionary object to Entity object
 
-- Carthage - Dependency manage tool
+- SPM - Dependency manage tool
 - SwiftLint - To be implemented
 
 ### Installation
