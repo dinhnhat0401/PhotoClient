@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 
 class ImageCacheService {
-    var mem = [URL: UIImage]()
+    var imageCache = NSCache<NSURL, UIImage>()
     func get(url: URL) -> UIImage? {
-        return mem[url]
+        return imageCache.object(forKey: url as NSURL)
     }
 
     func set(url: URL, image: UIImage) {
-        mem[url] = image
+        imageCache.setObject(image, forKey: url as NSURL)
     }
 }

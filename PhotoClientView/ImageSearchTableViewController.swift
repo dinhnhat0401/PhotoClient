@@ -57,26 +57,36 @@ extension ImageSearchTableViewController {
         let cell = tableView.dequeueReusableCell(
             withIdentifier: ImageSearchTableViewCell.identifier,
             for: indexPath) as! ImageSearchTableViewCell
-        cell.viewModel = viewCellModels[indexPath.row]
-        cell.getPreviewImage()
+        let viewModel = viewCellModels[indexPath.row]
+
+        cell.viewModel = viewModel
+        if viewModel.previewImage == nil {
+            viewModel.getPreviewImage().subscribe(onNext: { (image) in
+                self.updateData(image: image, viewModel: viewModel, indexPath: indexPath)
+            }).disposed(by: self.disposeBag)
+        } else {
+            cell.imageView?.image = viewModel.previewImage
+        }
         return cell
+    }
+
+    private func updateData(image: UIImage?, viewModel: ImageSearchTableViewCellModeling, indexPath: IndexPath) {
+        tableView.beginUpdates()
+        viewModel.setPreviewImage(image)
+        tableView.reloadRows(at: [indexPath], with: .automatic)
+        tableView.endUpdates()
     }
 }
 
 extension ImageSearchTableViewController: UITableViewDataSourcePrefetching {
     public func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         print("Prefetch: \(indexPaths)")
-        for indexPath in indexPaths {
-            let cell = tableView.dequeueReusableCell(
-                withIdentifier: ImageSearchTableViewCell.identifier,
-                for: indexPath) as! ImageSearchTableViewCell
-            cell.viewModel = viewCellModels[indexPath.row]
-            cell.getPreviewImage()
-        }
+        print("load more here")
     }
 
     public func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
         print("Canceling prefetch: \(indexPaths)")
+        print("cancel load more here")
     }
 }
 
